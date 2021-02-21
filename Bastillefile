@@ -1,0 +1,3 @@
+# doesn't do much yet, just a little fiddle with sshd
+CP etc /
+SERVICE sshd restart
