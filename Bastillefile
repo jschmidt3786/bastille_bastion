@@ -1,6 +1,7 @@
 # build out a bastion host
 
-PKG step-cli
+# probably not needed on a true bastion host
+#PKG step-cli net/py-magic-wormhole
 
 CMD pw group add -n sftponly -g 1000
 CMD pw user add -n sftp -u 1000 -c "sftp-only user" -g sftponly -G staff -m -M 0755 -s /bin/sh 
