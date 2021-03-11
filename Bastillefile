@@ -1,3 +1,16 @@
-# doesn't do much yet, just a little fiddle with sshd
+# build out a bastion host
+
+PKG step-cli
+
+CMD pw group add -n sftponly -g 1000
+CMD pw user add -n sftp -u 1000 -c "sftp-only user" -g sftponly -G staff -m -M 0755 -s /bin/sh 
+CMD chown root:wheel /home/sftp
+CMD mkdir /home/sftp/data
+CMD chown sftp:sftponly /home/sftp/data
+
 CP etc /
 SERVICE sshd restart
+
+CMD cat /etc/sftponly
+CMD rm -f /etc/sftponly
+
