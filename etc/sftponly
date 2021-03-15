@@ -1,4 +1,14 @@
 A new group has been added: sftponly
 A new user has been added: sftp
-A password has /not/ been set for the sftp user...
+A password has /not/ been set for the sftp user
+use the magic wormhole instead...
 
+ bastille console bastion
+ su - sftp
+ wormhole ssh invite
+
+then, on the client side:
+
+ wormhole ssh accept ...
+
+and select your public key to send
